@@ -1,0 +1,17 @@
+def power(x,n):
+    if n==1:
+        return x
+    if n==0:
+        return 1
+    xneg,nneg=x<0,n<0
+    x,n=abs(x),abs(n)
+    half=power(x,n//2)
+    if n%2==0:
+        ans=half*half
+    else:
+        ans=half*half*x
+    if xneg and n<0:
+        ans=-ans
+    if nneg:
+        ans=(1/ans)
+    return ans

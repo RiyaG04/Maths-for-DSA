@@ -15,3 +15,10 @@ def power(x,n):
     if nneg:
         ans=(1/ans)
     return ans
+    
+    
+a=int(input())
+p=int(input())
+res=power(a,p)
+print(res)
+

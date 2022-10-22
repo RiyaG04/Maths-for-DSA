@@ -1,0 +1,9 @@
+def lcm(a,b):
+    maxi=max(a,b)
+    while True:
+        if maxi%a==0 and maxi%b==0:
+            return maxi
+        maxi+=1
+a=int(input())
+b=int(input())
+print(lcm(a,b))

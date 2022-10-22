@@ -1,0 +1,21 @@
+
+import math
+def prime(n):
+    if n==1:
+        return False
+    if n==2 or n==3:
+        return True
+    if n%2==0 or n%3==0:
+        return False
+    a=int(math.sqrt(n))
+    for i in range(5,a+1,6):
+        if n%i==0 or n%(i+2)==0:
+            return False
+    return True
+
+n=int(input())
+res=prime(n)
+if res:
+    print(n, "is a prime number")
+else:
+    print(n, "not a prime number")

@@ -1,0 +1,10 @@
+def gcd(a,b):
+    mini=min(a,b)
+    while a>0:
+        if a%mini==0 and b%mini==0:
+            return mini
+        mini-=1
+
+a=int(input())
+b=int(input())
+print(gcd(a,b))
